@@ -6,7 +6,7 @@ A collection of prompts for GitHub Copilot in VS Code, organized by use case.
 
 | Prompt | What it does |
 |--------|-------------|
-| [worktrees](./worktrees/) | Create, list, switch, and delete git worktrees. Use when starting a new workstream, managing parallel branches, or cleaning up finished work. |
+| [worktrees](./worktrees/) | Create, list, switch, and delete git worktrees. Built for running **multiple Copilot agent sessions in parallel** — each agent gets its own isolated directory on the same repo, so they can explore features and fix bugs without stepping on each other. |
 
 ## How to install a prompt
 
