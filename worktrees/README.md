@@ -15,11 +15,25 @@ Invoke it in Copilot Chat with `/worktrees` followed by what you want to do:
 
 ## Who it's for
 
-Developers who work on multiple branches or tasks in parallel and want to avoid the friction of stashing, committing, or losing context when switching workstreams.
+Developers — and **AI coding agents** — who work on multiple branches or tasks in parallel and want to avoid the friction of stashing, committing, or losing context when switching workstreams.
 
 ## What problem it solves
 
-Switching branches mid-task interrupts your flow and risks losing work-in-progress. Git worktrees let you check out multiple branches simultaneously in separate directories, so you can jump between workstreams instantly.
+### Parallel work without conflicts
+
+The core reason this prompt exists: **multiple Copilot agents (or developers) can work on the same repository simultaneously without stepping on each other.**
+
+Each worktree is an isolated directory on disk with its own working tree, so agents exploring a new feature, fixing a bug, or running experiments all operate in separate folders — yet they all point at the same underlying repo and share the same history. No stashing, no context loss, no risk of one agent's in-progress changes clobbering another's.
+
+This makes it straightforward to run several agent sessions in parallel:
+
+- One agent refactoring an API on `feature/refactor-api`
+- Another investigating a bug on `bugfix/login-timeout`
+- Another exploring a speculative idea on `feature/new-idea`
+
+…all at the same time, all in the same repo, none of them interfering.
+
+### Visual distinction across windows
 
 When you're juggling multiple VS Code windows across worktrees, it's easy to lose track of which window is which branch. The prompt solves this by **styling each worktree window with a unique title bar color** based on branch convention — so you can tell at a glance which window is your feature branch, hotfix, or main line.
 
