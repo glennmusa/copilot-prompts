@@ -8,6 +8,23 @@ A collection of prompts for GitHub Copilot in VS Code, organized by use case.
 |--------|-------------|
 | [worktrees](./worktrees/) | Create, list, switch, and delete git worktrees. Use when starting a new workstream, managing parallel branches, or cleaning up finished work. |
 
+## How to install a prompt
+
+Copy any `.prompt.md` file into your VS Code user prompts directory:
+
+| OS | Path |
+|----|------|
+| macOS / Linux | `~/.config/Code/User/prompts/` |
+| Windows | `%APPDATA%\Code\User\prompts\` |
+
+For example, to install the worktrees prompt on macOS/Linux:
+
+```bash
+cp worktrees/worktrees.prompt.md ~/.config/Code/User/prompts/
+```
+
+Once copied, the prompt will appear in Copilot Chat when you type `/` followed by the prompt file name (without the `.prompt.md` extension).
+
 ## How to use
 
 Each prompt directory contains:
