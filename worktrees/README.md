@@ -21,13 +21,23 @@ Developers who work on multiple branches or tasks in parallel and want to avoid 
 
 Switching branches mid-task interrupts your flow and risks losing work-in-progress. Git worktrees let you check out multiple branches simultaneously in separate directories, so you can jump between workstreams instantly.
 
+When you're juggling multiple VS Code windows across worktrees, it's easy to lose track of which window is which branch. The prompt solves this by **styling each worktree window with a unique title bar color** based on branch convention — so you can tell at a glance which window is your feature branch, hotfix, or main line.
+
+| Branch pattern | Title bar color |
+|---|---|
+| `main` / `master` | 🟢 Green |
+| `develop` / `dev` | 🔵 Blue |
+| `feature/*` | 🟣 Purple |
+| `hotfix/*` / `bugfix/*` | 🔴 Red |
+| `release/*` | 🟠 Orange |
+
 ## What the prompt does
 
 ### Create
 
 - Creates a new worktree in a sibling directory named after the branch
 - Finds or creates a `.code-workspace` file in the parent directory and adds the new folder to it
-- Assigns a **unique title bar color** per branch convention (green for `main`, blue for `develop`, purple for `feature/*`, red for `hotfix/*`, orange for `release/*`) so you can visually tell windows apart
+- **Styles the worktree window** with a unique title bar color based on branch naming conventions (see table above), so every VS Code window is visually distinct at a glance
 - Writes color settings to `.vscode/settings.json` inside the worktree and adds that file to `.gitignore` so the colors don't pollute the repo
 
 ### List
