@@ -1,31 +1,35 @@
 # Worktrees Examples
 
-## Start a new workstream
+Use `/worktrees` in Copilot Chat followed by what you want to do.
+
+## Create a new worktree
 
 ```
-Create a git worktree for a new branch called [branch-name] in a sibling directory. Show me the commands to set it up and open it in VS Code.
+/worktrees create a new branch called my-feature
+```
+
+```
+/worktrees create a worktree for hotfix/login-crash
 ```
 
 ## List all worktrees
 
 ```
-List all of my current git worktrees, showing the directory, branch, and HEAD commit for each.
+/worktrees list
 ```
 
 ## Switch to an existing worktree
 
 ```
-I have an existing worktree for branch [branch-name]. Show me how to navigate to it and continue working.
+/worktrees switch to my-feature
 ```
 
-## Clean up a finished worktree
+## Delete a finished worktree
 
 ```
-I'm done with the worktree for branch [branch-name]. Show me how to remove the worktree and optionally delete the branch once it's merged.
+/worktrees delete my-feature
 ```
 
-## Check worktree status
-
 ```
-Show me the status of all my worktrees — which branches are ahead, behind, or have uncommitted changes.
+/worktrees delete hotfix/login-crash
 ```
